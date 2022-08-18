@@ -80,7 +80,7 @@ const SingleComment = ({ comment, postId, getPost }) => {
         <div
           key={comment._id}
           style={{ width: "100%" }}
-          className="col-md-11 col-lg-9 col-xl-7 d-flex flex-start mb-1 card w-110 card-body p-4"
+          className="col-md-11 col-lg-9 col-xl-7 d-flex flex-start mb-1 card card-body"
         >
           {commentUpdateState ? (
             <>
@@ -173,13 +173,10 @@ const SingleComment = ({ comment, postId, getPost }) => {
           })}
       </div>
       {openReply && (
-        <div style={{ display: "flex", width: "44vw", marginLeft: "10%" }}>
-          <form style={{ display: "flex", width: "96.8%" }}>
+        <div style={{ display: "flex", marginLeft: 10 + "%" }}>
+          <form style={{ display: "flex", width: "100%" }}>
             <input
               type="text"
-              style={{
-                width: "100%",
-              }}
               className="form-control"
               value={commentValue}
               name="recomment"

@@ -2,8 +2,6 @@ import homeImage from "./../images/home.jpeg";
 import styled, { keyframes } from "styled-components";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
-import { fetchMarketImages } from "../redux";
-import { connect } from "react-redux";
 import port from "./../data/port.json";
 import { useNavigate } from "react-router-dom";
 
@@ -315,7 +313,7 @@ const Home = () => {
         </DescribeTitle>
         <ContentComponent
           title={"CLOSET"}
-          content={"AI will classfy your clothes!"}
+          content={"AI will classify your clothes!"}
           column={"2/3"}
           textRow={"1/2"}
           imgRow={"2/5"}

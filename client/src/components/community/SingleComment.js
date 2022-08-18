@@ -120,8 +120,12 @@ const SingleComment = ({ comment, postId, getPost }) => {
               </h4>
 
               <div
-                className="d-flex justify-content-between align-items-center"
-                style={{ display: "flex" }}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "start",
+                  justifyContent: "start",
+                }}
               >
                 {comment.show && (
                   <LikeDislikes keyId={comment.shortId} urlType={"upmentId"} />
@@ -152,7 +156,7 @@ const SingleComment = ({ comment, postId, getPost }) => {
                     onClick={onClickReplyOpen}
                     className="btn btn-outline-dark"
                   >
-                    <i className="fas fa-reply me-1"></i> Reply
+                    <i className="fas fa-reply me-1"></i> Re
                   </button>
                 </div>
               </div>

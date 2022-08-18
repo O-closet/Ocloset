@@ -16,14 +16,14 @@ const GridContainer = styled.div`
 `;
 
 const Author = styled.div`
-  grid-column: 1/2;
+  grid-column: 1/4;
   grid-row: 1/2;
   font-size: calc(0.7vw + 12px);
   align-self: end;
 `;
 
 const Date = styled.div`
-  grid-column: 3/4;
+  grid-column: 1/4;
   grid-row: 1/2;
   color: gray;
   font-size: calc(0.5vw + 10px);
@@ -59,9 +59,13 @@ const LDContainer = styled.div`
 const Crud = styled.div`
   grid-column: 1/4;
   grid-row: 4/5;
-  font-size: calc(1vw + 11px);
+  font-size: calc(1vw + 12px);
   align-self: end;
   justify-self: end;
+
+  @media screen and (max-width: 530px) {
+    grid-row: 5/6;
+  }
 `;
 
 const PostContainer = ({ curPost, myPost, paramsId }) => {
@@ -102,7 +106,7 @@ const PostContainer = ({ curPost, myPost, paramsId }) => {
         <Title>
           {curPost.title}
           <br />
-          <Price>가격 : {curPost.price}</Price>
+          {curPost.price && <Price>가격 : {curPost.price}원</Price>}
         </Title>
 
         <Content> {curPost.content}</Content>

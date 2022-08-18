@@ -76,6 +76,8 @@ const ImageDiv = styled.div`
   overflow: hidden;
   background-color: white;
   border: 1px solid silver;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
   border-radius: 12%;
   &:hover {
     cursor: pointer;
@@ -169,9 +171,11 @@ const ContentImageContainer = styled.div`
     return props.row;
   }};
   width: 100%;
-  border: 1px solid white;
+  border: 1px solid silver;
   border-radius: 8%;
   overflow: hidden;
+  box-shadow: 0px 3px 5px -3px rgba(0, 0, 0, 0.2),
+    0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
 
   @media screen and (max-width: 530px) {
     grid-column: 1/2;

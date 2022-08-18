@@ -8,7 +8,7 @@ import styled from "styled-components";
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-rows: 1fr 2fr 1fr 1fr;
+  grid-template-rows: 1fr auto 1fr 1fr;
   grid-template-columns: 2fr 1.5fr 2fr;
   padding: 10px;
   border: 1px solid silver;
@@ -20,6 +20,7 @@ const Author = styled.div`
   grid-row: 1/2;
   font-size: calc(0.7vw + 12px);
   align-self: end;
+  border-bottom: 1px solid silver;
 `;
 
 const Date = styled.div`

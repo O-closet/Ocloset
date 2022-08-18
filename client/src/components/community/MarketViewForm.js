@@ -13,14 +13,14 @@ const SectionComponent = styled.section`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 100px 400px 400px;
+  padding: 100px 250px 200px;
 
   @media screen and (max-width: 1400px) {
     padding: 100px 150px 150px;
   }
 
   @media screen and (max-width: 1200px) {
-    padding: 100px 50px 50px;
+    padding: 100px 50px 100px;
   }
 
   @media screen and (max-width: 768px) {

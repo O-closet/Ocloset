@@ -113,7 +113,6 @@ const MarketUpdateForm = ({ postType, images }) => {
 
   return (
     <div style={{ paddingTop: 100 + "px", justifyContent: "center" }}>
-      <h1>{postType === 2 ? "OOTD" : "MARKET"}</h1>
       <div className="album">
         <div className="container">
           <div

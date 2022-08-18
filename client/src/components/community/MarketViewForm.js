@@ -128,7 +128,7 @@ const MarketViewForm = ({ postType }) => {
         headers: { accessToken: cookies.userData.accessToken },
       }
     );
-    setPrePost(prev.data.targetData.shortId);
+    setPrePost(prev.data.targetData?.shortId);
   };
 
   const getNextPost = async () => {
@@ -138,7 +138,7 @@ const MarketViewForm = ({ postType }) => {
         headers: { accessToken: cookies.userData.accessToken },
       }
     );
-    setNextPost(nxt.data.targetData.shortId);
+    setNextPost(nxt.data.targetData?.shortId);
   };
 
   const handleUpdateButton = () => {
@@ -298,7 +298,10 @@ const MarketViewForm = ({ postType }) => {
                   type="button"
                   className="btn btn-outline-secondary"
                   style={{ fontSize: "1vw" }}
-                  onClick={() => navigate(-1)}
+                  onClick={() => {
+                    navigate("/market");
+                    window.location.reload();
+                  }}
                 >
                   뒤로가기
                 </button>
